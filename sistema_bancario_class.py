@@ -197,10 +197,10 @@ def recuperar_conta_cliente(cliente):
 
     print("\n=== Escolha uma conta ===")
     for i, conta in enumerate(cliente.contas):
-        print(f"[{i}] Conta número: {conta.numero}, Saldo: R$ {conta.saldo:.2f}")
+        print(f"[{i + 1}] Conta número: {conta.numero}, Saldo: R$ {conta.saldo:.2f}")
 
     indice = int(input("Informe o número da conta: "))
-    return cliente.contas[indice]
+    return cliente.contas[indice - 1]
 
 
 def depositar(clientes):
